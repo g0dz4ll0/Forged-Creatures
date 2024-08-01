@@ -24,6 +24,8 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int spDefense;
     [SerializeField] int speed;
 
+    [SerializeField] List<LearnableMoves> learnableMoves;
+
     public string Name {
         get { return name; }
     }
@@ -70,6 +72,25 @@ public class PokemonBase : ScriptableObject
 
     public int Speed {
         get { return speed; }
+    }
+
+    public List<LearnableMoves> LearnableMoves {
+        get { return learnableMoves; }
+    }
+}
+
+[System.Serializable]
+public class LearnableMoves
+{
+    [SerializeField] MoveBase moveBase;
+    [SerializeField] int level;
+
+    public MoveBase Base {
+        get { return moveBase; }
+    }
+
+    public int Level {
+        get { return level; }
     }
 }
 
