@@ -16,7 +16,8 @@ MonoBehaviour:
   description: 
   type: 1
   power: 0
-  accuracy: 100
+  accuracy: 0
+  alwaysHits: 1
   pp: 20
   category: 2
   effects:
@@ -24,4 +25,5 @@ MonoBehaviour:
     - stat: 0
       boost: -1
     status: 0
+    volatileStatus: 0
   target: 0

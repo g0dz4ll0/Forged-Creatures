@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb47fd62f681b2644b9c81bac6e5e1b2, type: 3}
-  m_Name: Double Team
+  m_Name: Sand Attack
   m_EditorClassIdentifier: 
-  name: Double Team
+  name: Sand Attack
   description: 
-  type: 1
+  type: 9
   power: 0
   accuracy: 100
   alwaysHits: 0
@@ -22,8 +22,8 @@ MonoBehaviour:
   category: 2
   effects:
     boosts:
-    - stat: 6
-      boost: 1
+    - stat: 5
+      boost: -1
     status: 0
     volatileStatus: 0
-  target: 1
+  target: 0
