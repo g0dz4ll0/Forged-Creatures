@@ -16590,8 +16590,6 @@ MonoBehaviour:
     level: 2
   - _base: {fileID: 11400000, guid: 574e87a8af9812649a26718eec7c595a, type: 2}
     level: 4
-  - _base: {fileID: 11400000, guid: a49c2c292a53cd94e9c0920acc6afec9, type: 2}
-    level: 6
 --- !u!114 &1505459678
 MonoBehaviour:
   m_ObjectHideFlags: 0
