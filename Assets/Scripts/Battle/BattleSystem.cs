@@ -42,6 +42,7 @@ public class BattleSystem : MonoBehaviour
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
+        isTrainerBattle = false;
 
         StartCoroutine(SetupBattle());
     }
@@ -360,6 +361,13 @@ public class BattleSystem : MonoBehaviour
             yield return playerUnit.Hud.SetExpSmooth();
 
             // Check Level Up
+            while (playerUnit.Pokemon.CheckForLevelUp())
+            {
+                playerUnit.Hud.SetLevel();
+                yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} grew to level {playerUnit.Pokemon.Level}");
+
+                yield return playerUnit.Hud.SetExpSmooth(true);
+            }
 
             yield return new WaitForSeconds(1f);
         }
